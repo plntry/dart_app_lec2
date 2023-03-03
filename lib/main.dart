@@ -11,8 +11,8 @@ class Task {
     String title = '';
     String description = '';
 
-    if (str.contains(':')) {
-      final parts = str.split(':');
+    if (str.contains(',')) {
+      final parts = str.split(',');
 
       title = parts[0].trim();
       description = parts[1].trim();
@@ -100,7 +100,7 @@ void main() {
         // final description = stdin.readLineSync();
 
         print(
-            'Enter task title and description in format "title: description":');
+            'Enter task title and description in format "title, description":');
         final data = stdin.readLineSync();
 
         final task = Task.fromString(data!);
