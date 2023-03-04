@@ -93,14 +93,8 @@ void main() {
 
     switch (command) {
       case 'add':
-        // print('Enter task title:');
-        // final title = stdin.readLineSync();
-
-        // print('Enter task description (optional):');
-        // final description = stdin.readLineSync();
-
         print(
-            'Enter task title and description in format "title, description":');
+            'Enter task title and description(is optional) in format "title, description":');
         final data = stdin.readLineSync();
 
         final task = Task.fromString(data!);
